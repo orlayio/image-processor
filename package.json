@@ -1,0 +1,12 @@
+{
+  "name": "image-processor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@pozible/image-processor": "^1.0.1"
+  },
+  "scripts": {
+    "deploy": "gcloud beta functions deploy image-processor --entry-point=service --source . --region asia-northeast1 --memory=256MB --trigger-bucket orlay-public --runtime nodejs10"
+  }
+}
